@@ -1,6 +1,6 @@
-from env import Env
-from logger import logger_init
-from request_thread import RequestThread
+from config.env import Env
+from config.logger import logger_init
+from thread.request_thread import RequestThread
 
 def main():
     env = Env()
@@ -10,6 +10,5 @@ def main():
         quantity=env.get('threads'),
         url=env.get('url')
     ))
-
 
 main()
